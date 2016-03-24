@@ -17,9 +17,10 @@
  */
 
 import { readFile } from "fs-promise"
+import { Parser } from "./parser"
 
 
-export class Document {
+export class DocumentParser extends Parser {
 
   // ================
   // Document(string)

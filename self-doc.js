@@ -2,14 +2,14 @@
 // console.log(require("./document"))
 
 
-export * from "./document"
+export * from "./DocumentParser"
 
-import { Document } from "./document"
+import { DocumentParser } from "./DocumentParser"
 import { coroutine } from "bluebird"
 
 
 coroutine(function* () {
-  const doc = new Document(__dirname + "/document.js")
+  const doc = new DocumentParser(__dirname + "/document.js")
   //const classes = yield* doc.parseClasses()
   console.log(doc.toString())
 })()
