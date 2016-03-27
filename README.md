@@ -78,9 +78,9 @@ describe("#validateName", () => {
 ```
 
 ### Contributing
-If you would like to contribute to this project all help is welcome please just fork this and make a pull request. Please follow this the git nameing convension below and use eslint (config file provided) for code styling. If you run into an issue report in this repositories issues and I will respond as soon as posible.
+If you would like to contribute to this project all help is welcome please just fork this and make a pull request. Please follow this the git naming convension below and use eslint (config file provided) for code styling. If you run into an issue report in this repositories issues and I will respond as soon as posible.
 
-**Git branch nameing**
+**Git branch naming**
  + Feature branch: `feature/<name>`
  + Hotfix branch: `hotfix/<name>`
  + Refactoring/Cleaning: `refactoring/<name>`
