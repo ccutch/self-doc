@@ -10,7 +10,7 @@ This is a self documenting library build for documenting and testing Node applic
 ### Usage
 Generate documentation for given files to docs directory
 <br>
-`self-doc docs -o docs <input>`
+`self-doc doc -o docs <input>`
 
 Generate tests for given files to tests directory
 <br>
@@ -19,22 +19,25 @@ Generate tests for given files to tests directory
 
 ### Expected Behavior
 For a more detailed description of expect outputs reference specs directory
+<br>
+This example is for a public function.
 
 **Input:**
 ```javascript
 // ====
 // @name Validate Name
-// validatName(string) => boolean
+// validateName(string) => boolean
 // Validates the name of a person.
 // @run
 //  const name = "Connor McCutcheon"
-//  assert(validatName(name), true)
-//  assert(validatName("0$!@#"), false)
-export function validatName(input) {
+//  assert(validateName(name), true)
+//  assert(validateName("0$!@#"), false)
+export function validateName(input) {
   return /^[a-zA-Z ]+$/.test(input)
 }
 ```
 
+<br>
 **Output Documentation:**
 ```html
 ...
@@ -44,15 +47,40 @@ export function validatName(input) {
   <p>
     Validates the name of a person.
   </p>
+  <h4>Example:</h4>
   <pre>
     <code>
-      import { validateName } from "this-file"
+import { validateName } from "base-file"
 
-      const name = "Connor McCutcheon"
-      assert(validatName(name) === true)
-      assert(validatName("0$!@#") === false)
+const name = "Connor McCutcheon"
+assert(validateName(name) === true)
+assert(validateName("0$!@#") === false)
     </code>
   </pre>
 </section>
 ...
 ```
+
+<br>
+**Output Test:**
+```javascript
+// Test imports and setup above ...
+import { validateName } from "base-file"
+const tester = {}
+
+describe("#validateName", () => {
+  it("should run basic use case", () => {
+    const name = "Connor McCutcheon"
+    assert(validateName(name) === true)
+    assert(validateName("0$!@#") === false)
+  })
+})
+```
+
+### Contributing
+If you would like to contribute to this project all help is welcome please just fork this and make a pull request. Please follow this the git nameing convension below and use eslint (config file provided) for code styling. If you run into an issue report in this repositories issues and I will respond as soon as posible.
+
+**Git branch nameing**
+Feature branch: `feature/<name>`
+Hotfix branch: `hotfix/<name>`
+Refactoring/Cleaning: `refactoring/<name>`
