@@ -7,8 +7,6 @@ const commentHeader = /^\s*\/\/\s={3,}\s*$/
 
 export class Parser {
 
-
-
   // ==============================
   // parse(RegExp) => Array<string>
   parse(expression) {
@@ -17,6 +15,7 @@ export class Parser {
     }
     return this.data.match(expression)
   }
+
 
   // ==========================================
   // Parse comment lines from given line number
