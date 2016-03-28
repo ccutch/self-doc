@@ -30,7 +30,7 @@ The self-doc parser is looking for comments in code that are directly above the 
  + [Tags](#tags)
 
 ### Header
-Lets the parser know where the comment starts for parsing nonparsable comments such as jsdoc should be above header. The header should be a minimum of four equal signs, which is not an opperator in javascript, and looks nice. Required.
+Lets the parser know where the comment starts for parsing nonparsable comments such as jsdoc should be above header. The header should be a minimum of four equal signs, which is not an opperator in javascript, and looks nice. The definition of the subject may be on the same like as the header for brevity. Required.
 <br>
 **Example:**
 ```javascript
