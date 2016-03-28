@@ -42,7 +42,7 @@ function testFunction(input) {
 }
 
 // ====
-const name = "Connor
+const name = "Connor"
 ```
 
 ### Decorators
